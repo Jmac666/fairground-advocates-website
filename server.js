@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
@@ -80,7 +80,7 @@ app.post('/intake', intakeLimiter, async (req, res) => {
   const mailOptions = {
     from: process.env.MAIL_USER,
     to: 'realgringofurioso@gmail.com',
-    subject: `New Intake: ${s.fname} ${s.lname} — ${s.type}`,
+    subject: `New Intake: ${s.fname} ${s.lname} â€” ${s.type}`,
     html: `
       <h2 style="font-family:sans-serif;color:#1a2535;">New Fair Ground Advocates Intake</h2>
       <table style="font-family:sans-serif;font-size:15px;border-collapse:collapse;width:100%;">
@@ -102,6 +102,10 @@ app.post('/intake', intakeLimiter, async (req, res) => {
     console.error('Mail error:', err);
     res.redirect('/?error=true');
   }
+});
+
+app.get('/our-story', (req, res) => {
+  res.sendFile(path.join(__dirname, 'story.html'));
 });
 
 app.get('*', (req, res) => {
