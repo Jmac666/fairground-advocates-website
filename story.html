@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Fair Ground Advocates</title>
+<meta name="description" content="Why Fair Ground Advocates exists. The origin, the pattern, and the three pillars of our work protecting vulnerable people from exploitation.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fairgroundadvocates.org/our-story">
+<link rel="icon" type="image/png" href="/fga_icon.png">
+<link rel="apple-touch-icon" href="/fga_icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fairgroundadvocates.org/our-story">
+<meta property="og:title" content="Our Story | Fair Ground Advocates">
+<meta property="og:description" content="Why Fair Ground Advocates exists. The origin, the pattern, and the three pillars of our work.">
+<meta property="og:image" content="https://fairgroundadvocates.org/fga_icon.png">
+<meta property="og:site_name" content="Fair Ground Advocates">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Story | Fair Ground Advocates">
+<meta name="twitter:description" content="Why Fair Ground Advocates exists. The origin, the pattern, and the three pillars of our work.">
+<meta name="twitter:image" content="https://fairgroundadvocates.org/fga_icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2535;
+    --navy-deep: #0f1820;
+    --navy-mid: #243044;
+    --slate: #3d5068;
+    --steel: #6b8299;
+    --fog: #a8bccf;
+    --silver: #d4dde6;
+    --white: #f4f7fa;
+    --pure: #ffffff;
+    --accent: #c9a84c;
+    --accent-light: #e8c97a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy-deep);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 24, 32, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .nav-logo img {
+    height: 48px;
+    max-height: 48px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--fog);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a.active { color: var(--accent); }
+
+  .nav-cta {
+    background: var(--accent);
+    color: var(--navy-deep) !important;
+    padding: 10px 24px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--accent-light) !important; color: var(--navy-deep) !important; }
+
+  .story-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 48px 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .story-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 100%, rgba(201,168,76,0.05) 0%, transparent 70%),
+      linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+  }
+
+  .story-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  }
+
+  .story-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .story-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--pure);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.3s;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--accent-light);
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.5s;
+  }
+
+  .gold-rule {
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 auto;
+  }
+
+  .origin-section {
+    padding: 100px 48px;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .origin-lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--pure);
+    margin-bottom: 32px;
+  }
+
+  .origin-lede strong {
+    font-weight: 600;
+    color: var(--accent-light);
+  }
+
+  .origin-lede.secondary {
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: var(--fog);
+    margin-bottom: 48px;
+  }
+
+  .origin-body {
+    font-size: 17px;
+    color: var(--fog);
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .pattern-section {
+    background: var(--navy);
+    padding: 100px 0;
+  }
+
+  .pattern-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .pattern-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--pure);
+    margin-bottom: 32px;
+  }
+
+  .pattern-section p {
+    font-size: 17px;
+    color: var(--fog);
+    line-height: 1.85;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .standout {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.5vw, 28px) !important;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--silver) !important;
+    line-height: 1.4 !important;
+    border-left: 2px solid var(--accent);
+    padding-left: 28px;
+    margin: 40px 0 !important;
+    max-width: 640px !important;
+  }
+
+  .pillars-section {
+    padding: 100px 0;
+    background: var(--navy-deep);
+  }
+
+  .pillars-header {
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    padding: 0 48px;
+  }
+
+  .pillars-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--pure);
+  }
+
+  .pillar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 48px;
+    align-items: start;
+    border-top: 1px solid rgba(107,130,153,0.2);
+  }
+
+  .pillar:last-of-type {
+    border-bottom: 1px solid rgba(107,130,153,0.2);
+  }
+
+  .pillar-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.15);
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  .pillar-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--silver);
+    margin-bottom: 20px;
+  }
+
+  .pillar-content p {
+    font-size: 16px;
+    color: var(--steel);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .pillar-content p:last-child { margin-bottom: 0; }
+
+  .vision-section {
+    background: var(--navy);
+    padding: 100px 48px;
+    text-align: center;
+  }
+
+  .vision-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .vision-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--pure);
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+
+  .vision-section p {
+    font-size: 17px;
+    color: var(--fog);
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .cta-section {
+    background: var(--accent);
+    padding: 80px 48px;
+    text-align: center;
+  }
+
+  .cta-section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 300;
+    color: var(--navy-deep);
+    margin-bottom: 32px;
+  }
+
+  .btn-primary {
+    background: var(--navy-deep);
+    color: var(--accent);
+    padding: 16px 48px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    border: 2px solid var(--navy-deep);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--navy-deep);
+  }
+
+  footer {
+    background: var(--navy-deep);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    padding: 60px 48px 40px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 48px;
+  }
+
+  .footer-brand img {
+    height: 48px;
+    max-height: 48px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.7;
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+  .footer-col a {
+    font-size: 14px;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--fog); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(107,130,153,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom p { font-size: 12px; color: var(--slate); }
+
+  .social-links { display: flex; gap: 20px; }
+
+  .social-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover { color: var(--accent); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .story-hero { padding: 120px 24px 60px; }
+    .origin-section { padding: 64px 24px; }
+    .pattern-inner { padding: 0 24px; }
+    .pillars-header { padding: 0 24px; margin-bottom: 40px; }
+    .pillar { grid-template-columns: 1fr; gap: 16px; padding: 40px 24px; }
+    .pillar-number { font-size: 48px; }
+    .vision-section { padding: 64px 24px; }
+    .cta-section { padding: 60px 24px; }
+    footer { padding: 48px 24px 32px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="/"><img src="/fga_icon.png" alt="Fair Ground Advocates"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/our-story" class="active">Our Story</a></li>
+    <li><a href="/#pillars">What We Do</a></li>
+    <li><a href="/#intake">Get Help</a></li>
+    <li><a href="/#intake" class="nav-cta">Get Help Now</a></li>
+  </ul>
+</nav>
+
+<div class="story-hero">
+  <div class="story-hero-bg"></div>
+  <div class="story-hero-grid"></div>
+  <div class="story-hero-content">
+    <span class="section-label">Our Story</span>
+    <h1>This started with one family.</h1>
+    <p class="hero-sub">It didn't end there.</p>
+  </div>
+</div>
+
+<section class="origin-section">
+  <div class="gold-rule" style="margin-bottom: 60px;"></div>
+  <p class="origin-lede">A man took his wife's life and then his own, leaving behind <strong>three little girls.</strong></p>
+  <p class="origin-lede secondary">The family was given one phone number. One company. A $14,000 quote for a job that costs under $2,500.</p>
+  <p class="origin-body">That's where this started.</p>
+  <p class="origin-body">The crime scene remediation industry in California operates with zero consumer protections and no price transparency requirements. Families in the worst moments of their lives are handed a number by law enforcement and left to figure it out. No advocate. No context. No idea what anything should cost.</p>
+  <p class="origin-body">So we built one.</p>
+  <div class="gold-rule" style="margin-top: 60px;"></div>
+</section>
+
+<div class="pattern-section">
+  <div class="pattern-inner">
+    <span class="section-label">What We Found</span>
+    <h2>Vulnerability is not an isolated problem.</h2>
+    <p>The more we looked, the more we saw the same pattern everywhere. Vulnerable people, treated as a revenue source.</p>
+    <p class="standout">The through-line is always the same: the systems built in the name of the suffering are often the ones profiting from it.</p>
+    <p>Crime victims handed predatory quotes by unregulated contractors. Domestic abuse survivors with nowhere to go and no one in their corner. Homeless people in Sacramento warehoused in pallet lots that get counted as shelter beds so cities can collect federal funding, while the companies managing those camps pull six-figure salaries and solve nothing.</p>
+    <p>We exist to change that.</p>
+  </div>
+</div>
+
+<div class="pillars-section">
+  <div class="pillars-header">
+    <span class="section-label">How We Do It</span>
+    <h2>Real advocacy. Three ways.</h2>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar-number">01</div>
+    <div class="pillar-content">
+      <h3>Crime Victims and Families</h3>
+      <p>When violent crime occurs in a home, families are handed a phone number and, at most, a short list of local companies. There are no regulations on what can be charged. No price transparency requirements. No one at the table on their behalf.</p>
+      <p>We provide free honest estimates, vet contractors, navigate victim compensation programs, and sit across from insurance adjusters so families don't sign away their rights under pressure. California's CalVCB program covers up to $70,000 in eligible expenses. Most families never know it exists. We make sure they do.</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar-number">02</div>
+    <div class="pillar-content">
+      <h3>Displaced Individuals and Families</h3>
+      <p>Families fleeing domestic abuse, violent crime, or unsafe housing conditions often have nowhere to turn and no advocate in their corner.</p>
+      <p>We step in. We connect people to resources, fight for housing stability, and make sure no one navigates the system alone simply because they don't know how it works.</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar-number">03</div>
+    <div class="pillar-content">
+      <h3>Unhoused Communities and Institutional Accountability</h3>
+      <p>California's unhoused population is being systematically exploited. By municipalities counting pallet lots as shelter beds to hit HUD metrics. By government contractors billing millions to manage the optics of homelessness rather than solve it. By political operatives targeting people living on the street for voter registration and ballot harvesting.</p>
+      <p>We document this exploitation, advocate for the people caught in it, and push for accountability from institutions that profit from their suffering. Predatory pricing, fraudulent government contracts, and regulatory capture are not isolated incidents. They are business models. And they target people who don't have the resources or knowledge to fight back.</p>
+    </div>
+  </div>
+</div>
+
+<div class="vision-section">
+  <div class="vision-inner">
+    <span class="section-label">Where This Ends</span>
+    <h2>An America where no one gets a second wound.</h2>
+    <p>We're working toward a country where no person, regardless of income, housing status, or circumstance, can be legally exploited at their most vulnerable. Where government contracts serve people, not contractors. Where the systems built in the name of the suffering actually help them.</p>
+    <p>We're not there yet. But that's the point.</p>
+  </div>
+</div>
+
+<div class="cta-section">
+  <p>If you need help now, we're here.</p>
+  <a href="/#intake" class="btn-primary">Get Help Now</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/fga_icon.png" alt="Fair Ground Advocates">
+      <p>A Sacramento-based nonprofit protecting vulnerable people from exploitation. 501(c)(3) status pending.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-story">Our Story</a></li>
+        <li><a href="/#pillars">What We Do</a></li>
+        <li><a href="/#intake">Get Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="https://tiktok.com/@gringofurioso" target="_blank">TikTok</a></li>
+        <li><a href="https://instagram.com/realgringofurioso" target="_blank">Instagram</a></li>
+        <li><a href="https://youtube.com/@gringofurioso" target="_blank">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Fair Ground Advocates. A California Nonprofit Public Benefit Corporation.</p>
+    <div class="social-links">
+      <a href="https://tiktok.com/@gringofurioso" target="_blank">TikTok</a>
+      <a href="https://instagram.com/realgringofurioso" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@gringofurioso" target="_blank">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
