@@ -30,7 +30,10 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS,
-  }
+  },
+  connectionTimeout: 5000,
+  greetingTimeout: 5000,
+  socketTimeout: 5000,
 });
 
 // --- Rate limiter: 5 submissions per IP per 15 min ---
@@ -115,3 +118,4 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Fair Ground Advocates running on port ${PORT}`);
 });
+
