@@ -107,6 +107,16 @@ app.post('/intake', intakeLimiter, async (req, res) => {
   }
 });
 
+// TEMP DEBUG - remove after fixing mail
+app.get('/debug-mail', async (req, res) => {
+  try {
+    await transporter.verify();
+    res.json({ status: 'ok', user: process.env.MAIL_USER ? 'set' : 'NOT SET' });
+  } catch (err) {
+    res.json({ status: 'error', message: err.message, code: err.code, user: process.env.MAIL_USER ? 'set' : 'NOT SET' });
+  }
+});
+
 app.get('/our-story', (req, res) => {
   res.sendFile(path.join(__dirname, 'story.html'));
 });
@@ -118,4 +128,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Fair Ground Advocates running on port ${PORT}`);
 });
+
 
